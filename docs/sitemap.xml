@@ -3,19 +3,63 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://teamtact.github.io/hugobase/</loc>
+    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/simple-python/</loc>
+    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/template/</loc>
+    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/confusion_matrix/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/custom_function/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/label_encoder/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/lambda_function/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/list_append/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/post_stemmer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/remove_stopwords/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/rename_column/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/tokenisation/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/unique_function/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vaishnavi171.github.io/mlnotes/</loc>
     <lastmod>2019-04-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://teamtact.github.io/hugobase/python/basics/simple-python/</loc>
-    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://teamtact.github.io/hugobase/python/basics/template/</loc>
-    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
+    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/f1_score/</loc>
   </url>
   
 </urlset>

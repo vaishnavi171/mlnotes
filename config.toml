@@ -1,6 +1,6 @@
-baseURL = "https://teamtact.github.io/hugobase/"
+baseURL = "https://vaishnavi171.github.io/mlnotes/"
 languageCode = "en-us"
-title = "John Doe"
+title = "Vaishnavi"
 theme = "berbera"
 
 pygmentsCodeFences=true
