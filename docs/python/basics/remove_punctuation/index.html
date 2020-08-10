@@ -16,13 +16,13 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="Label Encoder" />
+<meta property="og:title" content="Remove Punctuation" />
 <meta property="og:description" content="-" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://vaishnavi171.github.io/mlnotes/python/basics/label_encoder/" />
+<meta property="og:url" content="https://vaishnavi171.github.io/mlnotes/python/basics/remove_punctuation/" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Label Encoder"/>
+<meta name="twitter:title" content="Remove Punctuation"/>
 <meta name="twitter:description" content="-"/>
 <meta name="generator" content="Hugo 0.50" /> 
     
@@ -31,9 +31,9 @@
 {
   "@context": "http://schema.org",
   "@type": "BlogPosting",
-  "headline": "Label Encoder",
-  "url": "https://vaishnavi171.github.io/mlnotes/python/basics/label_encoder/",
-  "wordCount": "90",
+  "headline": "Remove Punctuation",
+  "url": "https://vaishnavi171.github.io/mlnotes/python/basics/remove_punctuation/",
+  "wordCount": "96",
   "datePublished": "0001-01-01T00:00:00&#43;00:00",
   "author": {
     "@type": "Person",
@@ -43,7 +43,7 @@
 }
 </script> 
 
-    <title>Label Encoder</title>
+    <title>Remove Punctuation</title>
 
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
@@ -115,13 +115,13 @@ MathJax.Hub.Config({
   <div class="technical_note">
   <header>
       
-    <h1 class="technical_note_title">Label Encoder</h1>
+    <h1 class="technical_note_title">Remove Punctuation</h1>
     <div class="technical_note_date">
       <time datetime=" 0001-01-01T00:00:00Z "> 01 Jan 0001</time>
     </div>
   </header>
   <div class="content">
-  <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">content</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ham&#39;</span><span class="p">,</span><span class="s1">&#39;spam&#39;</span><span class="p">,</span><span class="s1">&#39;ham&#39;</span><span class="p">]</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">content</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Sms content&#39;</span><span class="p">})</span>
+  <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">content</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hey!&#39;</span><span class="p">,</span><span class="s1">&#39;great..&#39;</span><span class="p">,</span><span class="s1">&#39;nice@&#39;</span><span class="p">]</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">content</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Sms content&#39;</span><span class="p">})</span>
 <span class="n">df</span></code></pre></div>
 <div>
 <style scoped>
@@ -147,23 +147,24 @@ MathJax.Hub.Config({
   <tbody>
     <tr>
       <th>0</th>
-      <td>ham</td>
+      <td>hey!</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>spam</td>
+      <td>great..</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>ham</td>
+      <td>nice@</td>
     </tr>
   </tbody>
 </table>
 </div>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># encode</span>
-<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">preprocessing</span>
-<span class="n">encode</span> <span class="o">=</span> <span class="n">preprocessing</span><span class="o">.</span><span class="n">LabelEncoder</span><span class="p">()</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;find spam&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">encode</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Sms content&#39;</span><span class="p">])</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">string</span>
+<span class="n">string</span><span class="o">.</span><span class="n">punctuation</span>
+<span class="k">def</span> <span class="nf">remove_punctuation</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="n">new_text</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">char</span> <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">text</span> <span class="k">if</span> <span class="n">char</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">string</span><span class="o">.</span><span class="n">punctuation</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">new_text</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span><span class="p">[</span><span class="s1">&#39;new_sms&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Sms content&#39;</span><span class="p">]</span><span class="o">.</span><span class="nb">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span> <span class="p">:</span> <span class="n">remove_punctuation</span><span class="p">(</span><span class="n">row</span><span class="p">))</span>
 <span class="n">df</span></code></pre></div>
 <div>
 <style scoped>
@@ -184,24 +185,24 @@ MathJax.Hub.Config({
     <tr style="text-align: right;">
       <th></th>
       <th>Sms content</th>
-      <th>find spam</th>
+      <th>new_sms</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>ham</td>
-      <td>0</td>
+      <td>hey!</td>
+      <td>hey</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>spam</td>
-      <td>1</td>
+      <td>great..</td>
+      <td>great</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>ham</td>
-      <td>0</td>
+      <td>nice@</td>
+      <td>nice</td>
     </tr>
   </tbody>
 </table>

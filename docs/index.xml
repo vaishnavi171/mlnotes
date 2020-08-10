@@ -85,6 +85,15 @@ var1 = &amp;#34;Cat&amp;#34; var2 = &amp;#34;Ant&amp;#34; var3 = &amp;#34;Bird&a
     </item>
     
     <item>
+      <title>Remove Punctuation</title>
+      <link>https://vaishnavi171.github.io/mlnotes/python/basics/remove_punctuation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vaishnavi171.github.io/mlnotes/python/basics/remove_punctuation/</guid>
+      <description>import pandas as pdcontent = [&amp;#39;hey!&amp;#39;,&amp;#39;great..&amp;#39;,&amp;#39;nice@&amp;#39;]df=pd.DataFrame(content,columns={&amp;#39;Sms content&amp;#39;}) df  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    Sms content     0 hey!   1 great..   2 nice@     import string string.punctuation def remove_punctuation(text): new_text=&amp;#39;&amp;#39;.join([char for char in text if char not in string.punctuation]) return new_textdf[&amp;#39;new_sms&amp;#39;]=df[&amp;#39;Sms content&amp;#39;].</description>
+    </item>
+    
+    <item>
       <title>Remove Stopwords</title>
       <link>https://vaishnavi171.github.io/mlnotes/python/basics/remove_stopwords/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
