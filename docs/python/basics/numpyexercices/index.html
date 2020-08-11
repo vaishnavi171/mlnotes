@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-66582-32"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-66582-32');
+    </script>
+
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Numpy Exercises" />
+<meta property="og:description" content="-" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://vaishnavi171.github.io/mlnotes/python/basics/numpyexercices/" /><meta property="article:published_time" content="2020-08-10T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2020-08-10T00:00:00&#43;00:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Numpy Exercises"/>
+<meta name="twitter:description" content="-"/>
+<meta name="generator" content="Hugo 0.50" /> 
+    
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Numpy Exercises",
+  "url": "https://vaishnavi171.github.io/mlnotes/python/basics/numpyexercices/",
+  "wordCount": "1001",
+  "datePublished": "2020-08-10T00:00:00&#43;00:00",
+  "dateModified": "2020-08-10T00:00:00&#43;00:00",
+  "author": {
+    "@type": "Person",
+    "name": "Vaishnavi"
+  },
+  "description": "-"
+}
+</script> 
+
+    <title>Numpy Exercises</title>
+
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+
+    
+    <link href="https://vaishnavi171.github.io/mlnotes/css/custom.css" rel="stylesheet"> 
+    <link href="https://vaishnavi171.github.io/mlnotes/css/syntax.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,500,700" rel="stylesheet">
+        
+    <link href="" rel="alternate" type="application/rss+xml" title="Vaishnavi" /> 
+    
+    <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="https://vaishnavi171.github.io/mlnotes/">Vaishnavi</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav mr-auto"></ul>
+                <ul class="navbar-nav">
+                    
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            About
+                        </a>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+
+                 
+
+
+<article>
+  <div class="technical_note">
+  <header>
+      
+    <h1 class="technical_note_title">Numpy Exercises</h1>
+    <div class="technical_note_date">
+      <time datetime=" 2020-08-10T00:00:00Z "> 10 Aug 2020</time>
+    </div>
+  </header>
+  <div class="content">
+  <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span> </code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 1. Creating array object </span>
+
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span> <span class="p">[[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> 
+                 <span class="p">[</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">]]</span> <span class="p">)</span> 
+  
+<span class="c1"># Printing type of arr object </span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Array is of type: &#34;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span> 
+  
+<span class="c1"># Printing array dimensions (axes)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;No. of dimensions: &#34;</span><span class="p">,</span> <span class="n">arr</span><span class="o">.</span><span class="n">ndim</span><span class="p">)</span> 
+  
+<span class="c1"># Printing shape of array </span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Shape of array: &#34;</span><span class="p">,</span> <span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
+  
+<span class="c1"># Printing size (total number of elements) of array </span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Size of array: &#34;</span><span class="p">,</span> <span class="n">arr</span><span class="o">.</span><span class="n">size</span><span class="p">)</span> 
+  
+<span class="c1"># Printing type of elements in array </span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Array stores elements of type: &#34;</span><span class="p">,</span> <span class="n">arr</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span></code></pre></div>
+<pre><code>Array is of type:  &lt;class 'numpy.ndarray'&gt;
+No. of dimensions:  2
+Shape of array:  (2, 3)
+Size of array:  6
+Array stores elements of type:  int64
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 2. Replace items that satisfy a condition with another value in numpy array </span>
+
+<span class="n">out</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">arr</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">arr</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Original Array</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span><span class="n">arr</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Array Modified</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span><span class="n">out</span><span class="p">)</span></code></pre></div>
+<pre><code>Original Array
+ [[1 2 3]
+ [4 2 5]]
+Array Modified
+ [[ 1 -1  3]
+ [-1 -1  5]]
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 3. Reshape array</span>
+
+<span class="n">newarr</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Reshaping Array</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span><span class="n">newarr</span><span class="p">)</span></code></pre></div>
+<pre><code>Reshaping Array
+ [1 2 3 4 2 5]
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 4. Slicing 2D Array</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Slicing Array&#34;</span><span class="p">,</span><span class="n">arr</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span></code></pre></div>
+<pre><code>Slicing Array [2 5]
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 5. Flipping the Array</span>
+
+<span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> 
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Original array : </span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">array</span><span class="p">)</span> 
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Flipped array : </span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span> </code></pre></div>
+<pre><code>Original array : 
+ [[[0 1]
+  [2 3]]
+
+ [[4 5]
+  [6 7]]]
+Flipped array : 
+ [[[4 5]
+  [6 7]]
+
+ [[0 1]
+  [2 3]]]
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 6. Searching</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">out</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></code></pre></div>
+<pre><code>(array([0]), array([2]))
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 7.Make a python function that handles scalars to work on numpy arrays </span>
+
+<span class="k">def</span> <span class="nf">maxx</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="s2">&#34;&#34;&#34;Get the maximum of two items&#34;&#34;&#34;</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="n">y</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">x</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">y</span>
+
+<span class="n">pair_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vectorize</span><span class="p">(</span><span class="n">maxx</span><span class="p">,</span> <span class="n">otypes</span><span class="o">=</span><span class="p">[</span><span class="nb">float</span><span class="p">])</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+<span class="n">pair_max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span></code></pre></div>
+<pre><code>array([6., 7., 9., 8., 9., 7., 5.])
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 8. Numpy Take method</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Taking Indices</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="n">arr</span><span class="p">,[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]))</span> </code></pre></div>
+<pre><code>Taking Indices
+ [[1 2]
+ [3 4]]
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 9. To create identical matrix</span>
+
+<span class="n">idn</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Create Identical Matrix</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span><span class="n">idn</span><span class="p">)</span></code></pre></div>
+<pre><code>Create Identical Matrix
+ [[1. 0. 0. 0.]
+ [0. 1. 0. 0.]
+ [0. 0. 1. 0.]
+ [0. 0. 0. 1.]]
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 10. Numpy Hypot function</span>
+
+<span class="n">arr1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span> 
+<span class="k">print</span> <span class="p">(</span><span class="s2">&#34;arr1 array : &#34;</span><span class="p">,</span> <span class="n">arr1</span><span class="p">)</span> 
+
+
+<span class="n">arr2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span> 
+<span class="k">print</span> <span class="p">(</span><span class="s2">&#34;arr2 array : &#34;</span><span class="p">,</span> <span class="n">arr2</span><span class="p">)</span> 
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hypot</span><span class="p">(</span><span class="n">arr1</span><span class="p">,</span> <span class="n">arr2</span><span class="p">)</span> 
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Hypotenuse is as follows :&#34;</span><span class="p">,</span><span class="n">result</span><span class="p">)</span> </code></pre></div>
+<pre><code>arr1 array :  [12, 3, 4, 6]
+arr2 array :  [5, 4, 3, 8]
+
+Hypotenuse is as follows : [13.  5.  5. 10.]
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 11. Slicing</span>
+
+<span class="n">sliced_arr</span> <span class="o">=</span> <span class="n">idn</span><span class="p">[:</span><span class="mi">2</span><span class="p">,</span> <span class="p">::</span><span class="mi">2</span><span class="p">]</span>
+<span class="k">print</span> <span class="p">(</span><span class="s2">&#34;Array with first 2 rows and&#34;</span>
+    <span class="s2">&#34; alternate columns(0 and 2):</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">sliced_arr</span><span class="p">)</span></code></pre></div>
+<pre><code>Array with first 2 rows and alternate columns(0 and 2):
+ [[1. 0.]
+ [0. 0.]]
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 12. Inverse of a matrix</span>
+
+<span class="n">mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="p">])</span>
+<span class="n">inverse_mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">inverse_mat</span><span class="p">)</span> </code></pre></div>
+<pre><code>[[-2.   1. ]
+ [ 1.5 -0.5]]
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 13. Squareroot of array elements</span>
+
+<span class="n">Sqrt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Square root of Array1 elements: &#34;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">Sqrt</span><span class="p">)</span></code></pre></div>
+<pre><code>Square root of Array1 elements: 
+[[1.         1.41421356]
+ [1.73205081 2.        ]]
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 14. Transpose of Array</span>
+
+<span class="n">Trans_mat</span> <span class="o">=</span> <span class="n">mat</span><span class="o">.</span><span class="n">T</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Transpose of Array: &#34;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">Trans_mat</span><span class="p">)</span></code></pre></div>
+<pre><code>Transpose of Array: 
+[[1 3]
+ [2 4]]
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 15. To find real number or not</span>
+
+<span class="n">in_array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span> 
+<span class="k">print</span> <span class="p">(</span><span class="s2">&#34;Input array : </span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">in_array</span><span class="p">)</span> 
+
+<span class="n">output_value</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">isrealobj</span><span class="p">(</span><span class="n">in_array</span><span class="p">)</span> 
+<span class="k">print</span> <span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Is real : </span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">output_value</span><span class="p">)</span> </code></pre></div>
+<pre><code>Input array : 
+ [1, 3, 5, 4]
+
+Is real : 
+ True
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 16. Flip left to right</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Flipped array left-right : </span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">fliplr</span><span class="p">(</span><span class="n">mat</span><span class="p">))</span> </code></pre></div>
+<pre><code>Flipped array left-right : 
+ [[2 1]
+ [4 3]]
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 17. Roundoff using function</span>
+
+  
+<span class="n">in_array</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="mi">5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">,</span> <span class="mf">10.1</span><span class="p">]</span> 
+<span class="k">print</span> <span class="p">(</span><span class="s2">&#34;Input array : </span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">in_array</span><span class="p">)</span> 
+  
+<span class="n">rintoff_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">rint</span><span class="p">(</span><span class="n">in_array</span><span class="p">)</span> 
+<span class="k">print</span> <span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Rounded values : </span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">rintoff_values</span><span class="p">)</span> </code></pre></div>
+<pre><code>Input array : 
+ [0.5, 1.5, 2.5, 3.5, 4.5, 10.1]
+
+Rounded values : 
+ [ 0.  2.  2.  4.  4. 10.]
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 18. bmat() function</span>
+
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mat</span><span class="p">(</span><span class="s1">&#39;4 1; 22 1&#39;</span><span class="p">)</span> 
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mat</span><span class="p">(</span><span class="s1">&#39;5 2; 5 2&#39;</span><span class="p">)</span> 
+<span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mat</span><span class="p">(</span><span class="s1">&#39;8 4; 6 6&#39;</span><span class="p">)</span> 
+  
+<span class="c1"># array like igeekut </span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">bmat</span><span class="p">([[</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">],</span> <span class="p">[</span><span class="n">C</span><span class="p">,</span> <span class="n">A</span><span class="p">]])</span> 
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Via bmat array like input : </span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s2">&#34;</span><span class="se">\n\n</span><span class="s2">&#34;</span><span class="p">)</span> 
+  
+<span class="c1"># string like igeekut </span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">bmat</span><span class="p">(</span><span class="s1">&#39;A, B; A, A&#39;</span><span class="p">)</span> 
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Via bmat string like input : </span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span> </code></pre></div>
+<pre><code>Via bmat array like input : 
+ [[ 4  1  5  2]
+ [22  1  5  2]
+ [ 8  4  4  1]
+ [ 6  6 22  1]] 
+
+
+Via bmat string like input : 
+ [[ 4  1  5  2]
+ [22  1  5  2]
+ [ 4  1  4  1]
+ [22  1 22  1]]
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 19. roll()</span>
+
+<span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> 
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Original array : </span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">array</span><span class="p">)</span> 
+   
+<span class="c1"># Rolling array; Shifting one place </span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Rolling with 1 shift : </span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">roll</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> </code></pre></div>
+<pre><code>Original array : 
+ [[ 0  1  2  3]
+ [ 4  5  6  7]
+ [ 8  9 10 11]]
+
+Rolling with 1 shift : 
+ [[11  0  1  2]
+ [ 3  4  5  6]
+ [ 7  8  9 10]]
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 20. 2x2 matrix with 1&#39;s on main diagnol </span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">dtype</span> <span class="o">=</span> <span class="nb">float</span><span class="p">)</span> 
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Matrix b : </span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> </code></pre></div>
+<pre><code>Matrix b : 
+ [[1. 0.]
+ [0. 1.]]
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 21. numpy.full_like method </span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">dtype</span> <span class="o">=</span> <span class="nb">int</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> 
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;x before full_like : </span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> 
+  
+<span class="c1"># using full_like </span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">x after full_like : </span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">full_like</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">))</span> </code></pre></div>
+<pre><code>x before full_like : 
+ [[0 1 2 3 4]
+ [5 6 7 8 9]]
+
+x after full_like : 
+ [[10 10 10 10 10]
+ [10 10 10 10 10]]
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 22. Diagonal  Elements</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span>  
+                 <span class="p">[</span><span class="mi">63</span> <span class="p">,</span><span class="mi">434</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>  
+                 <span class="p">[</span><span class="mi">54</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">56</span><span class="p">]])</span> 
+  
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Main Diagnal elements : </span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span> </code></pre></div>
+<pre><code>Main Diagnal elements : 
+ [  1 434  56] 
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 23. Numpy.diagflat method </span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;diagflat use on main diagonal : </span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">diagflat</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">]),</span> <span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span> </code></pre></div>
+<pre><code>diagflat use on main diagonal : 
+ [[1 0]
+ [0 7]] 
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 24. Creates a 5 X 5 array and returns indices of main diagonal elements </span>
+
+<span class="n">d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag_indices</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> 
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Indices of diagnol elements as tuple : &#34;</span><span class="p">)</span> 
+<span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span> </code></pre></div>
+<pre><code>Indices of diagnol elements as tuple : 
+(array([0, 1, 2, 3, 4]), array([0, 1, 2, 3, 4])) 
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 25. To predict financial future values</span>
+
+<span class="n">Solution</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fv</span><span class="p">(</span><span class="mf">0.05</span><span class="o">/</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="o">*</span><span class="mi">12</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">)</span> 
+  
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Solution : &#34;</span><span class="p">,</span> <span class="n">Solution</span><span class="p">)</span></code></pre></div>
+<pre><code>Solution :  15692.928894335748
+
+
+&lt;ipython-input-34-fcf883c3b6a2&gt;:3: DeprecationWarning: numpy.fv is deprecated and will be removed from NumPy 1.20. Use numpy_financial.fv instead (https://pypi.org/project/numpy-financial/).
+  Solution = np.fv(0.05/12, 10*12, -100, -100)
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
+</div>
+  <aside>
+      
+      </aside>
+
+    </div>
+</article>
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    
+
+    <footer class="footer text-center">
+        <div class="container">
+            <span class="text-muted">This project contains 16 pages and is available on <a href="https://github.com/vaishnavi171">GitHub</a>. Copyright &copy; TEAM TACT, <time datetime="2019">2019</time>.</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
