@@ -50,7 +50,7 @@
     <item>
       <title>Confusion Matrix</title>
       <link>https://vaishnavi171.github.io/mlnotes/python/basics/confusion_matrix/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://vaishnavi171.github.io/mlnotes/python/basics/confusion_matrix/</guid>
       <description>from sklearn.metrics import confusion_matrix
@@ -60,7 +60,7 @@ var1 = &amp;#34;Cat&amp;#34; var2 = &amp;#34;Ant&amp;#34; var3 = &amp;#34;Bird&a
     <item>
       <title>Custom Function</title>
       <link>https://vaishnavi171.github.io/mlnotes/python/basics/custom_function/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://vaishnavi171.github.io/mlnotes/python/basics/custom_function/</guid>
       <description>import pandas as pddata = [&amp;#39;Vachitaya aapuuuuuuuuu&amp;#39;,&amp;#39;Sing in the rain&amp;#39; ,&amp;#39;Great power comes wih great &amp;#39;] df = pd.DataFrame(data, columns = [&amp;#39;Sent&amp;#39;]) df  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    Sent     0 Vachitaya aapuuuuuuuuu   1 Sing in the rain   2 Great power comes wih great     def sent_length(message): return (len(message))df[&amp;#39;len&amp;#39;] = df[&amp;#39;Sent&amp;#39;].</description>
@@ -69,7 +69,7 @@ var1 = &amp;#34;Cat&amp;#34; var2 = &amp;#34;Ant&amp;#34; var3 = &amp;#34;Bird&a
     <item>
       <title>Label Encoder</title>
       <link>https://vaishnavi171.github.io/mlnotes/python/basics/label_encoder/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://vaishnavi171.github.io/mlnotes/python/basics/label_encoder/</guid>
       <description>import pandas as pdcontent = [&amp;#39;ham&amp;#39;,&amp;#39;spam&amp;#39;,&amp;#39;ham&amp;#39;]df=pd.DataFrame(content,columns={&amp;#39;Sms content&amp;#39;}) df  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    Sms content     0 ham   1 spam   2 ham     # encode from sklearn import preprocessing encode = preprocessing.LabelEncoder() df[&amp;#39;find spam&amp;#39;] = encode.fit_transform(df[&amp;#39;Sms content&amp;#39;]) df  .</description>
@@ -78,7 +78,7 @@ var1 = &amp;#34;Cat&amp;#34; var2 = &amp;#34;Ant&amp;#34; var3 = &amp;#34;Bird&a
     <item>
       <title>Lambda Function</title>
       <link>https://vaishnavi171.github.io/mlnotes/python/basics/lambda_function/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://vaishnavi171.github.io/mlnotes/python/basics/lambda_function/</guid>
       <description>import pandas as pdcontent = [&amp;#39;hi&amp;#39;,&amp;#39;hello&amp;#39;,&amp;#39;how are you&amp;#39;]df=pd.DataFrame(content,columns={&amp;#39;Sms content&amp;#39;}) df  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    Sms content     0 hi   1 hello   2 how are you     df[&amp;#39;msg_length&amp;#39;] = df[&amp;#39;Sms content&amp;#39;].apply(lambda x:len(x)) df.head()  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .</description>
@@ -87,7 +87,7 @@ var1 = &amp;#34;Cat&amp;#34; var2 = &amp;#34;Ant&amp;#34; var3 = &amp;#34;Bird&a
     <item>
       <title>List Append</title>
       <link>https://vaishnavi171.github.io/mlnotes/python/basics/list_append/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://vaishnavi171.github.io/mlnotes/python/basics/list_append/</guid>
       <description>list1 = [&amp;#39;a&amp;#39;,&amp;#39;b&amp;#39;] list1 [&#39;a&#39;, &#39;b&#39;]  list1.append(&amp;#39;c&amp;#39;) list1 [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;c&#39;]  </description>
@@ -96,7 +96,7 @@ var1 = &amp;#34;Cat&amp;#34; var2 = &amp;#34;Ant&amp;#34; var3 = &amp;#34;Bird&a
     <item>
       <title>Post Stemmer</title>
       <link>https://vaishnavi171.github.io/mlnotes/python/basics/post_stemmer/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://vaishnavi171.github.io/mlnotes/python/basics/post_stemmer/</guid>
       <description>from nltk.stem import PorterStemmer e_words= [&amp;#34;wait&amp;#34;, &amp;#34;waiting&amp;#34;, &amp;#34;waited&amp;#34;, &amp;#34;waits&amp;#34;] ps =PorterStemmer() for w in e_words: rootWord=ps.stem(w) print(rootWord) wait wait wait wait  </description>
@@ -105,7 +105,7 @@ var1 = &amp;#34;Cat&amp;#34; var2 = &amp;#34;Ant&amp;#34; var3 = &amp;#34;Bird&a
     <item>
       <title>Remove Punctuation</title>
       <link>https://vaishnavi171.github.io/mlnotes/python/basics/remove_punctuation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://vaishnavi171.github.io/mlnotes/python/basics/remove_punctuation/</guid>
       <description>import pandas as pdcontent = [&amp;#39;hey!&amp;#39;,&amp;#39;great..&amp;#39;,&amp;#39;nice@&amp;#39;]df=pd.DataFrame(content,columns={&amp;#39;Sms content&amp;#39;}) df  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    Sms content     0 hey!   1 great..   2 nice@     import string string.punctuation def remove_punctuation(text): new_text=&amp;#39;&amp;#39;.join([char for char in text if char not in string.punctuation]) return new_textdf[&amp;#39;new_sms&amp;#39;]=df[&amp;#39;Sms content&amp;#39;].</description>
@@ -114,7 +114,7 @@ var1 = &amp;#34;Cat&amp;#34; var2 = &amp;#34;Ant&amp;#34; var3 = &amp;#34;Bird&a
     <item>
       <title>Remove Stopwords</title>
       <link>https://vaishnavi171.github.io/mlnotes/python/basics/remove_stopwords/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://vaishnavi171.github.io/mlnotes/python/basics/remove_stopwords/</guid>
       <description>import pandas as pdcontent = [&amp;#39;hey i am your boss!&amp;#39;,&amp;#39;he is great..&amp;#39;,&amp;#39;nice@&amp;#39;]df=pd.DataFrame(content,columns={&amp;#39;Sms content&amp;#39;}) df  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    Sms content     0 hey i am your boss!   1 he is great..   2 nice@     import nltk nltk.download(&amp;#39;stopwords&amp;#39;) stopwords=nltk.</description>
@@ -123,7 +123,7 @@ var1 = &amp;#34;Cat&amp;#34; var2 = &amp;#34;Ant&amp;#34; var3 = &amp;#34;Bird&a
     <item>
       <title>Rename Column</title>
       <link>https://vaishnavi171.github.io/mlnotes/python/basics/rename_column/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://vaishnavi171.github.io/mlnotes/python/basics/rename_column/</guid>
       <description>import pandas as pddata = [&amp;#39;Database team&amp;#39;,&amp;#39;ML team&amp;#39; ,&amp;#39;Flask team&amp;#39;] df = pd.DataFrame(data, columns = [&amp;#39;Team&amp;#39;]) df  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    Team     0 Database team   1 ML team   2 Flask team     df.columns=[&amp;#39;Intern Team&amp;#39;] df  .</description>
@@ -132,7 +132,7 @@ var1 = &amp;#34;Cat&amp;#34; var2 = &amp;#34;Ant&amp;#34; var3 = &amp;#34;Bird&a
     <item>
       <title>Scikit Learn notes</title>
       <link>https://vaishnavi171.github.io/mlnotes/python/basics/scikit_learn/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://vaishnavi171.github.io/mlnotes/python/basics/scikit_learn/</guid>
       <description># 1. Enhances contrast in large almost uniform regions. import skimage from skimage import data from skimage import exposure from matplotlib import pyplot as plt camera = data.camera() camera_equalized = exposure.equalize_hist(camera) plt.imshow(camera_equalized) &amp;lt;matplotlib.image.AxesImage at 0x7f60bd119fd0&amp;gt;  # 2. Data Set reading from sklearn import datasets # Load data iris= datasets.load_iris() # Print shape of data to confirm data is loaded print(iris.data.shape) (150, 4)  # 3. Train and Test Split X = iris.</description>
@@ -141,7 +141,7 @@ var1 = &amp;#34;Cat&amp;#34; var2 = &amp;#34;Ant&amp;#34; var3 = &amp;#34;Bird&a
     <item>
       <title>Tokenisation</title>
       <link>https://vaishnavi171.github.io/mlnotes/python/basics/tokenisation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://vaishnavi171.github.io/mlnotes/python/basics/tokenisation/</guid>
       <description>import pandas as pdcontent = [&amp;#39;hey boss!&amp;#39;,&amp;#39;great..&amp;#39;,&amp;#39;nice@&amp;#39;]df=pd.DataFrame(content,columns={&amp;#39;Sms content&amp;#39;}) df  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    Sms content     0 hey boss!   1 great..   2 nice@     import re def tokenize(text): tokens=re.split(&amp;#39;\W+&amp;#39;,text) return tokensdf[&amp;#39;tokenized_text&amp;#39;]=df[&amp;#39;Sms content&amp;#39;].apply(lambda row : tokenize(row.lower())) df.head()  .</description>
@@ -150,7 +150,7 @@ var1 = &amp;#34;Cat&amp;#34; var2 = &amp;#34;Ant&amp;#34; var3 = &amp;#34;Bird&a
     <item>
       <title>Unique Function</title>
       <link>https://vaishnavi171.github.io/mlnotes/python/basics/unique_function/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://vaishnavi171.github.io/mlnotes/python/basics/unique_function/</guid>
       <description>import pandas as pdpd.Series([2, 4, 3, 3], name=&amp;#39;P&amp;#39;).unique() array([2, 4, 3])  </description>
@@ -159,7 +159,7 @@ var1 = &amp;#34;Cat&amp;#34; var2 = &amp;#34;Ant&amp;#34; var3 = &amp;#34;Bird&a
     <item>
       <title>f1 Score</title>
       <link>https://vaishnavi171.github.io/mlnotes/python/basics/f1_score/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://vaishnavi171.github.io/mlnotes/python/basics/f1_score/</guid>
       <description>from sklearn.metrics import f1_scoretrue = [0, 1, 2, 0, 1, 2] pred = [0, 2, 1, 0, 0, 1]f1_score(true, pred, average=&amp;#39;macro&amp;#39;) 0.26666666666666666  f1_score(true, pred, average=&amp;#39;micro&amp;#39;) 0.3333333333333333  f1_score(true, pred, average=&amp;#39;weighted&amp;#39;) 0.26666666666666666  </description>
