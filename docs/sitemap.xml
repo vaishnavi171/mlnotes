@@ -3,13 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/numpyexercices/</loc>
+    <loc>https://vaishnavi171.github.io/mlnotes/python/numpy/numpyexercices/</loc>
     <lastmod>2020-08-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://vaishnavi171.github.io/mlnotes/python/numpy/numpyexercices/</loc>
-    <lastmod>2020-08-10T00:00:00+00:00</lastmod>
+    <loc>https://vaishnavi171.github.io/mlnotes/python/scikit/scikit_learn/</loc>
+    <lastmod>2020-08-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -56,10 +56,6 @@
   
   <url>
     <loc>https://vaishnavi171.github.io/mlnotes/python/basics/rename_column/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/scikit_learn/</loc>
   </url>
   
   <url>
