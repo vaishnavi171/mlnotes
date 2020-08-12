@@ -1,7 +1,7 @@
 ---
 title: "Remove Punctuation"
 author: "Vaishnavi"
-date: 2020-08-9
+date: 2020-08-09
 description: "-"
 type: technical_note
 draft: false
