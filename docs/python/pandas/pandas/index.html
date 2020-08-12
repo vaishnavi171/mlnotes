@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-66582-32"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-66582-32');
+    </script>
+
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Pandas Exercises" />
+<meta property="og:description" content="-" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://vaishnavi171.github.io/mlnotes/python/pandas/pandas/" /><meta property="article:published_time" content="2020-08-10T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2020-08-10T00:00:00&#43;00:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Pandas Exercises"/>
+<meta name="twitter:description" content="-"/>
+<meta name="generator" content="Hugo 0.50" /> 
+    
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Pandas Exercises",
+  "url": "https://vaishnavi171.github.io/mlnotes/python/pandas/pandas/",
+  "wordCount": "2485",
+  "datePublished": "2020-08-10T00:00:00&#43;00:00",
+  "dateModified": "2020-08-10T00:00:00&#43;00:00",
+  "author": {
+    "@type": "Person",
+    "name": "Vaishnavi"
+  },
+  "description": "-"
+}
+</script> 
+
+    <title>Pandas Exercises</title>
+
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+
+    
+    <link href="https://vaishnavi171.github.io/mlnotes/css/custom.css" rel="stylesheet"> 
+    <link href="https://vaishnavi171.github.io/mlnotes/css/syntax.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,500,700" rel="stylesheet">
+        
+    <link href="" rel="alternate" type="application/rss+xml" title="Vaishnavi" /> 
+    
+    <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="https://vaishnavi171.github.io/mlnotes/">Vaishnavi</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav mr-auto"></ul>
+                <ul class="navbar-nav">
+                    
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            About
+                        </a>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+
+                 
+
+
+<article>
+  <div class="technical_note">
+  <header>
+      
+    <h1 class="technical_note_title">Pandas Exercises</h1>
+    <div class="technical_note_date">
+      <time datetime=" 2020-08-10T00:00:00Z "> 10 Aug 2020</time>
+    </div>
+  </header>
+  <div class="content">
+  <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 1. Loading and finding info of data</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;kapi.xlsx&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">),</span><span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;ActorScore&#39;</span><span class="p">)</span> 
+<span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;----------------&#34;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span></code></pre></div>
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 1286 entries, 0 to 1285
+Data columns (total 7 columns):
+ #   Column            Non-Null Count  Dtype  
+---  ------            --------------  -----  
+ 0   Artist Name       989 non-null    object 
+ 1   Year              1286 non-null   int64  
+ 2   Movie             283 non-null    object 
+ 3   Critic Score      211 non-null    float64
+ 4   Audience Score    211 non-null    float64
+ 5   Box Office Score  211 non-null    float64
+ 6   Updated By        0 non-null      float64
+dtypes: float64(4), int64(1), object(2)
+memory usage: 70.5+ KB
+----------------
+              Year  Critic Score  Audience Score  Box Office Score  Updated By
+count  1286.000000    211.000000      211.000000        211.000000         0.0
+mean   2014.715397      6.739336        7.308057          6.677725         NaN
+std       3.807410      1.332137        1.432574          1.767545         NaN
+min    1990.000000      3.000000        3.000000          2.000000         NaN
+25%    2012.000000      6.000000        6.000000          5.000000         NaN
+50%    2015.000000      7.000000        8.000000          7.000000         NaN
+75%    2018.000000      8.000000        8.000000          8.000000         NaN
+max    2020.000000     10.000000       10.000000          9.000000         NaN
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 2. Finding shape of data</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">shape</span></code></pre></div>
+<pre><code>(1286, 7)
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 3. Seeing the first and last data</span>
+<span class="k">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;________________________________________________________________________________________________&#34;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span></code></pre></div>
+<pre><code>  Artist Name  Year            Movie  Critic Score  Audience Score  \
+0     Dhanush  2010  Uthama puthiran           5.0             7.0   
+1     Dhanush  2011          Venghai           4.0             5.0   
+2     Dhanush  2012                3           7.0             8.0   
+3     Dhanush  2013           Maryan           8.0             7.0   
+4     Dhanush  2014              VIP           8.0             9.0   
+
+   Box Office Score  Updated By  
+0               5.0         NaN  
+1               4.0         NaN  
+2               8.0         NaN  
+3               7.0         NaN  
+4               8.0         NaN  
+________________________________________________________________________________________________
+     Artist Name  Year Movie  Critic Score  Audience Score  Box Office Score  \
+1281         NaN  2016   NaN           NaN             NaN               NaN   
+1282         NaN  2017   NaN           NaN             NaN               NaN   
+1283         NaN  2018   NaN           NaN             NaN               NaN   
+1284         NaN  2019   NaN           NaN             NaN               NaN   
+1285         NaN  2020   NaN           NaN             NaN               NaN   
+
+      Updated By  
+1281         NaN  
+1282         NaN  
+1283         NaN  
+1284         NaN  
+1285         NaN  
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 4. Looking null values in dataset</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="nb">sum</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;______________&#34;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="nb">sum</span><span class="p">()</span><span class="o">.</span><span class="nb">sum</span><span class="p">())</span></code></pre></div>
+<pre><code>Artist Name          297
+Year                   0
+Movie               1003
+Critic Score        1075
+Audience Score      1075
+Box Office Score    1075
+Updated By          1286
+dtype: int64
+______________
+5811
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 5. Dropping columns</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Updated By&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">df</span></code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Artist Name</th>
+      <th>Year</th>
+      <th>Movie</th>
+      <th>Critic Score</th>
+      <th>Audience Score</th>
+      <th>Box Office Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Dhanush</td>
+      <td>2010</td>
+      <td>Uthama puthiran</td>
+      <td>5.0</td>
+      <td>7.0</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Dhanush</td>
+      <td>2011</td>
+      <td>Venghai</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Dhanush</td>
+      <td>2012</td>
+      <td>3</td>
+      <td>7.0</td>
+      <td>8.0</td>
+      <td>8.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Dhanush</td>
+      <td>2013</td>
+      <td>Maryan</td>
+      <td>8.0</td>
+      <td>7.0</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Dhanush</td>
+      <td>2014</td>
+      <td>VIP</td>
+      <td>8.0</td>
+      <td>9.0</td>
+      <td>8.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1281</th>
+      <td>NaN</td>
+      <td>2016</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1282</th>
+      <td>NaN</td>
+      <td>2017</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1283</th>
+      <td>NaN</td>
+      <td>2018</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1284</th>
+      <td>NaN</td>
+      <td>2019</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1285</th>
+      <td>NaN</td>
+      <td>2020</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>1286 rows × 6 columns</p>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 6. Dropping null value rows</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;any&#39;</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span></code></pre></div>
+<pre><code>    Artist Name  Year            Movie  Critic Score  Audience Score  \
+0       Dhanush  2010  Uthama puthiran           5.0             7.0   
+1       Dhanush  2011          Venghai           4.0             5.0   
+2       Dhanush  2012                3           7.0             8.0   
+3       Dhanush  2013           Maryan           8.0             7.0   
+4       Dhanush  2014              VIP           8.0             9.0   
+..          ...   ...              ...           ...             ...   
+218       Vivek  2020   Dharala Prabhu           6.0             5.0   
+220  Vetrimaran  2011        Aadukalam           8.0             6.0   
+222  Vetrimaran  2013      Udhayam NH4          10.0             6.0   
+223  Vetrimaran  2014       Poriyaalan           6.0             6.0   
+224  Vetrimaran  2015     Kaaka Muttai           8.0            10.0   
+
+     Box Office Score  
+0                 5.0  
+1                 4.0  
+2                 8.0  
+3                 7.0  
+4                 8.0  
+..                ...  
+218               4.0  
+220               6.0  
+222               5.0  
+223               6.0  
+224               7.0  
+
+[211 rows x 6 columns]
+(211, 6)
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 7. Checking whether null values are present</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="nb">sum</span><span class="p">()</span></code></pre></div>
+<pre><code>Artist Name         0
+Year                0
+Movie               0
+Critic Score        0
+Audience Score      0
+Box Office Score    0
+dtype: int64
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 8. Prints the datatypes of all columns</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span> </code></pre></div>
+<pre><code>Artist Name          object
+Year                  int64
+Movie                object
+Critic Score        float64
+Audience Score      float64
+Box Office Score    float64
+dtype: object
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 9. Finding unique actor names and year</span>
+
+<span class="n">act</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Movie&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">act</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;_____________________________________________&#34;</span><span class="p">)</span>
+<span class="n">y</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span></code></pre></div>
+<pre><code>['Uthama puthiran', 'Venghai', 3, 'Maryan', 'VIP', 'Anegan', 'Kodi', 'VIP 2', 'Vada chennai', 'Asuran', 'Pattas', 'VTV', 'Osthi', 'Podaa podi', 'Kanna laddu thinna aasaiya', 'Inga enna solluthu', 'Vaalu', 'Achcham enbathu madamaiyada', 'Anbanavan adangathavan asarathavan', 'Chekka chivantha vaanam', 'Vantha Rajavathan varuven', 'Kaatrin mozhi', 'Sura', 'Velayudham', 'Thuppaki', 'Thalaivaa', 'Kaththi', 'Puli', 'Theri', 'Mersal', 'Sarkar', 'Bigil', 'David', 'Ethir neechal', 'Vanakkam chennai', 'Vellailla pattadhaari', 'Vedhalam', 'Remo', 'Vivegam', 'Kolamavu kokila', 'Petta', 'Darbar', 'Manam kothi paravai', 'Kedi Billa killadi Ranga', 'Varuthapadatha valibar sangam', 'Maan karate', 'Rajini murugan', 'Velaikaran', 'Seema Raja', 'Mr local', 'Hero', 'Baana kaathadi', 'Naan E', 'Neethane En ponvasantham', 'Anjaan', 'Thanga magan', 24, 'U Turn', 'Irumbu thirai', 'Super deluxe', 'Thodari', 'Bairavaa', 'Thaana serntha koottam', 'Nadigayar thilagam', 'Seema raja', 'Saamy 2', 'Sandakozhi 2', 'Penguin', 'Enthiran', 'Vinnai thaandi varuvaaya', 'Kadal', 'Kochadaiyaan', 'I', '2.o', 'Gentle man', 'Indian', 'Mudhalvan', 'Boys', 'Anniyan', 'Sivaji', 'Nanban', '7aum arivu', 'Endrendrum Punnagai', 'Idhu Kathirvelan Kadhal', 'Iru Mugan', 'Vanamagan', 'Spyder', 'Dev', 'Kaappan', 'Dheena', 'Ramana', 'Ghajini', '7 am arivu', 'Thillalangadi', 'Engeyum Kadhal', 'Aadhi Bhagavan', 'Nimirndhu nil', 'Romeo Juliet', 'Thani Oruvan', 'Miruthan', 'Bogan', 'Tik Tik Tik', 'Adanga maru', 'Comali', 'Mankatha', 'Billa 2', 'Arrambam', 'Mass', 'Dharma Durai', 'Kadamban', 'Irumbu Thirai', 'NGK', 'Boss Engira Bhaskaran', 'Aarambam', 'Raja Rani', 'Idhu Kathirvelanin kadhal', 'Nanbenda', 'Maya', 'Dora', 'Kolamavu Kokila', 'Viswasam', 'Anjali', 'Thalapathy', 'Roja', 'Bombay', 'Alaipayuthey', 'Ayutha eluthu', 'Raavanan', 'O kadhal kanmani', 'Kaatru veliyidai', 'Naattamai', 'Avvai Shanmugi', 'Padayappa', 'Panchathanthiram', 'Aethiree', 'Saravana', 'Dasavatharam', 'Aadhavan', 'Manmadhan Ambu', 'Lingaa', 'Mudinja Ivana pudi', 'Nagaram', 'Kaavalan', 'Mambattiyaan', 'Tenali Raman', 'Eli', 'Kaththi Sandai', 'Shivalinga', 'Vinnai Thaandi Varuvayaa', 'Samar', 'Yennai Arindhaal', 'Aranmanai 2', 96, 'Irumbokottai murattu Singam', 'Kanchana', 'Kanchana 2', 'Motta Siva ketta Siva', 'Kanchana 3', 'Singam', 'Vedi', 'Muratu Kalai', 'Singam 2', 'Velaiyilla Pattathari', 'Yennai Arindhal', 'Manithan', 'Ezhumin', 'Dharala Prabhu', 'Aadukalam', 'Udhayam NH4', 'Poriyaalan', 'Kaaka Muttai']
+_____________________________________________
+[2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 1993, 1996, 1999, 2003, 2005, 2007, 2001, 2002, 1990, 1991, 1992, 1995, 2000, 2004, 1994, 2006, 2008, 2009]
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 10. Finding avg in each score of the artist</span>
+
+<span class="n">c</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[::,</span><span class="mi">3</span><span class="p">:</span><span class="mi">6</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">c</span><span class="p">:</span>
+    <span class="n">s</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&#34;Artist Name&#34;</span><span class="p">])[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="nb">sum</span><span class="p">()</span>
+    <span class="n">av</span><span class="o">=</span><span class="n">s</span><span class="o">/</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&#34;Artist Name&#34;</span><span class="p">])[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">())</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">av</span><span class="p">)</span></code></pre></div>
+<pre><code>Artist Name
+AR Murugadoss           7.777778
+AR Rahman               7.818182
+Anirudh Ravichandran    7.545455
+Dhanush                 6.272727
+Harris Jayaraj          7.000000
+Jayam Ravi              6.545455
+KS Ravi Kumar           6.363636
+Keerthy Suresh          6.636364
+Mani Ratnam             7.090909
+Nayanthara              6.000000
+Raghava Lawrence        4.750000
+Samantha                7.454545
+Shankar                 8.300000
+Simbu                   5.181818
+Siva Karthikeyan        6.818182
+Trisha                  6.666667
+Vadivelu                5.818182
+Vetrimaran              8.000000
+Vijay                   6.500000
+Vivek                   6.454545
+Yuvan Shankar Raja      6.363636
+Name: Critic Score, dtype: float64
+Artist Name
+AR Murugadoss           8.444444
+AR Rahman               8.181818
+Anirudh Ravichandran    8.090909
+Dhanush                 7.090909
+Harris Jayaraj          7.545455
+Jayam Ravi              6.909091
+KS Ravi Kumar           7.090909
+Keerthy Suresh          7.090909
+Mani Ratnam             7.818182
+Nayanthara              6.636364
+Raghava Lawrence        6.000000
+Samantha                7.818182
+Shankar                 8.600000
+Simbu                   6.000000
+Siva Karthikeyan        7.181818
+Trisha                  7.333333
+Vadivelu                6.363636
+Vetrimaran              7.000000
+Vijay                   7.700000
+Vivek                   6.636364
+Yuvan Shankar Raja      7.272727
+Name: Audience Score, dtype: float64
+Artist Name
+AR Murugadoss           8.222222
+AR Rahman               8.636364
+Anirudh Ravichandran    8.090909
+Dhanush                 6.454545
+Harris Jayaraj          7.090909
+Jayam Ravi              6.636364
+KS Ravi Kumar           6.090909
+Keerthy Suresh          7.363636
+Mani Ratnam             6.727273
+Nayanthara              5.272727
+Raghava Lawrence        4.250000
+Samantha                7.727273
+Shankar                 8.700000
+Simbu                   4.818182
+Siva Karthikeyan        7.090909
+Trisha                  5.888889
+Vadivelu                5.090909
+Vetrimaran              6.000000
+Vijay                   7.400000
+Vivek                   5.545455
+Yuvan Shankar Raja      5.545455
+Name: Box Office Score, dtype: float64
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 11. Data bucketing or data binning on box office score</span>
+
+<span class="n">op_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;poor&#39;</span><span class="p">,</span><span class="s1">&#39;moderate&#39;</span><span class="p">,</span> <span class="s1">&#39;good&#39;</span><span class="p">,</span> <span class="s1">&#39;excellent&#39;</span><span class="p">]</span>
+<span class="n">category</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.</span><span class="p">,</span><span class="mf">3.</span><span class="p">,</span><span class="mf">5.</span><span class="p">,</span><span class="mf">7.</span><span class="p">,</span><span class="mf">10.</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;avg boxoffice rating&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Box Office Score&#39;</span><span class="p">],</span> <span class="n">labels</span><span class="o">=</span><span class="n">op_labels</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">category</span><span class="p">,</span> <span class="n">include_lowest</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">df</span></code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Artist Name</th>
+      <th>Year</th>
+      <th>Movie</th>
+      <th>Critic Score</th>
+      <th>Audience Score</th>
+      <th>Box Office Score</th>
+      <th>avg boxoffice rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Dhanush</td>
+      <td>2010</td>
+      <td>Uthama puthiran</td>
+      <td>5.0</td>
+      <td>7.0</td>
+      <td>5.0</td>
+      <td>moderate</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Dhanush</td>
+      <td>2011</td>
+      <td>Venghai</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>4.0</td>
+      <td>moderate</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Dhanush</td>
+      <td>2012</td>
+      <td>3</td>
+      <td>7.0</td>
+      <td>8.0</td>
+      <td>8.0</td>
+      <td>excellent</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Dhanush</td>
+      <td>2013</td>
+      <td>Maryan</td>
+      <td>8.0</td>
+      <td>7.0</td>
+      <td>7.0</td>
+      <td>good</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Dhanush</td>
+      <td>2014</td>
+      <td>VIP</td>
+      <td>8.0</td>
+      <td>9.0</td>
+      <td>8.0</td>
+      <td>excellent</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>218</th>
+      <td>Vivek</td>
+      <td>2020</td>
+      <td>Dharala Prabhu</td>
+      <td>6.0</td>
+      <td>5.0</td>
+      <td>4.0</td>
+      <td>moderate</td>
+    </tr>
+    <tr>
+      <th>220</th>
+      <td>Vetrimaran</td>
+      <td>2011</td>
+      <td>Aadukalam</td>
+      <td>8.0</td>
+      <td>6.0</td>
+      <td>6.0</td>
+      <td>good</td>
+    </tr>
+    <tr>
+      <th>222</th>
+      <td>Vetrimaran</td>
+      <td>2013</td>
+      <td>Udhayam NH4</td>
+      <td>10.0</td>
+      <td>6.0</td>
+      <td>5.0</td>
+      <td>moderate</td>
+    </tr>
+    <tr>
+      <th>223</th>
+      <td>Vetrimaran</td>
+      <td>2014</td>
+      <td>Poriyaalan</td>
+      <td>6.0</td>
+      <td>6.0</td>
+      <td>6.0</td>
+      <td>good</td>
+    </tr>
+    <tr>
+      <th>224</th>
+      <td>Vetrimaran</td>
+      <td>2015</td>
+      <td>Kaaka Muttai</td>
+      <td>8.0</td>
+      <td>10.0</td>
+      <td>7.0</td>
+      <td>good</td>
+    </tr>
+  </tbody>
+</table>
+<p>211 rows × 7 columns</p>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 12. Renaming column names</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Artist Name&#39;</span><span class="p">:</span><span class="s1">&#39;artistname&#39;</span><span class="p">,</span> <span class="s1">&#39;Audience Score&#39;</span><span class="p">:</span><span class="s1">&#39;audiencescore&#39;</span><span class="p">,</span> <span class="s1">&#39;Box Office Score&#39;</span><span class="p">:</span><span class="s1">&#39;boxofficescore&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">df</span></code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>artistname</th>
+      <th>Year</th>
+      <th>Movie</th>
+      <th>Critic Score</th>
+      <th>audiencescore</th>
+      <th>boxofficescore</th>
+      <th>avg boxoffice rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Dhanush</td>
+      <td>2010</td>
+      <td>Uthama puthiran</td>
+      <td>5.0</td>
+      <td>7.0</td>
+      <td>5.0</td>
+      <td>moderate</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Dhanush</td>
+      <td>2011</td>
+      <td>Venghai</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>4.0</td>
+      <td>moderate</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Dhanush</td>
+      <td>2012</td>
+      <td>3</td>
+      <td>7.0</td>
+      <td>8.0</td>
+      <td>8.0</td>
+      <td>excellent</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Dhanush</td>
+      <td>2013</td>
+      <td>Maryan</td>
+      <td>8.0</td>
+      <td>7.0</td>
+      <td>7.0</td>
+      <td>good</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Dhanush</td>
+      <td>2014</td>
+      <td>VIP</td>
+      <td>8.0</td>
+      <td>9.0</td>
+      <td>8.0</td>
+      <td>excellent</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>218</th>
+      <td>Vivek</td>
+      <td>2020</td>
+      <td>Dharala Prabhu</td>
+      <td>6.0</td>
+      <td>5.0</td>
+      <td>4.0</td>
+      <td>moderate</td>
+    </tr>
+    <tr>
+      <th>220</th>
+      <td>Vetrimaran</td>
+      <td>2011</td>
+      <td>Aadukalam</td>
+      <td>8.0</td>
+      <td>6.0</td>
+      <td>6.0</td>
+      <td>good</td>
+    </tr>
+    <tr>
+      <th>222</th>
+      <td>Vetrimaran</td>
+      <td>2013</td>
+      <td>Udhayam NH4</td>
+      <td>10.0</td>
+      <td>6.0</td>
+      <td>5.0</td>
+      <td>moderate</td>
+    </tr>
+    <tr>
+      <th>223</th>
+      <td>Vetrimaran</td>
+      <td>2014</td>
+      <td>Poriyaalan</td>
+      <td>6.0</td>
+      <td>6.0</td>
+      <td>6.0</td>
+      <td>good</td>
+    </tr>
+    <tr>
+      <th>224</th>
+      <td>Vetrimaran</td>
+      <td>2015</td>
+      <td>Kaaka Muttai</td>
+      <td>8.0</td>
+      <td>10.0</td>
+      <td>7.0</td>
+      <td>good</td>
+    </tr>
+  </tbody>
+</table>
+<p>211 rows × 7 columns</p>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 13. Max rating in a year with movie name</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&#34;Year&#34;</span><span class="p">,</span><span class="s2">&#34;Movie&#34;</span><span class="p">])[</span><span class="s2">&#34;audiencescore&#34;</span><span class="p">]</span><span class="o">.</span><span class="nb">max</span><span class="p">()</span></code></pre></div>
+<pre><code>Year  Movie         
+1990  Anjali             8.0
+1991  Thalapathy        10.0
+1992  Roja               9.0
+1993  Gentle man         8.0
+1994  Naattamai          9.0
+                        ... 
+2019  Viswasam           7.0
+2020  Darbar             9.0
+      Dharala Prabhu     5.0
+      Pattas             8.0
+      Penguin            7.0
+Name: audiencescore, Length: 173, dtype: float64
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 14. Calculates mean</span>
+
+<span class="n">scores</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">3</span><span class="p">:]</span> 
+ 
+<span class="n">scores</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> </code></pre></div>
+<pre><code>Critic Score      6.739336
+audiencescore     7.308057
+boxofficescore    6.677725
+dtype: float64
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 15. If condition</span>
+
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;set_of_numbers&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;set_of_numbers&#39;</span><span class="p">])</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;set_of_numbers&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;equal_or_lower_than_4?&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;True&#39;</span> 
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;set_of_numbers&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;equal_or_lower_than_4?&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;False&#39;</span> 
+
+<span class="k">print</span> <span class="p">(</span><span class="n">df</span><span class="p">)</span></code></pre></div>
+<pre><code>   set_of_numbers equal_or_lower_than_4?
+0               1                   True
+1               2                   True
+2               3                   True
+3               4                   True
+4               5                  False
+5               6                  False
+6               7                  False
+7               8                  False
+8               9                  False
+9              10                  False
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 16. Strings - If condition</span>
+
+<span class="n">names</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;First_name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Jon&#39;</span><span class="p">,</span><span class="s1">&#39;Bill&#39;</span><span class="p">,</span><span class="s1">&#39;Maria&#39;</span><span class="p">,</span><span class="s1">&#39;Emma&#39;</span><span class="p">]}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">names</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;First_name&#39;</span><span class="p">])</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;First_name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Bill&#39;</span><span class="p">,</span> <span class="s1">&#39;name_match&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Match&#39;</span>  
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;First_name&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;Bill&#39;</span><span class="p">,</span> <span class="s1">&#39;name_match&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Mismatch&#39;</span>  
+ 
+<span class="k">print</span> <span class="p">(</span><span class="n">df</span><span class="p">)</span></code></pre></div>
+<pre><code>  First_name name_match
+0        Jon   Mismatch
+1       Bill      Match
+2      Maria   Mismatch
+3       Emma   Mismatch
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 17. &amp; and | condition</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;First_name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Bill&#39;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;First_name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Emma&#39;</span><span class="p">),</span> <span class="s1">&#39;name_match&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Match&#39;</span>  
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;First_name&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;Bill&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;First_name&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;Emma&#39;</span><span class="p">),</span> <span class="s1">&#39;name_match&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Mismatch&#39;</span>  
+
+<span class="k">print</span> <span class="p">(</span><span class="n">df</span><span class="p">)</span></code></pre></div>
+<pre><code>  First_name name_match
+0        Jon   Mismatch
+1       Bill      Match
+2      Maria   Mismatch
+3       Emma      Match
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 18. To set values</span>
+
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;set_of_numbers&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;set_of_numbers&#39;</span><span class="p">])</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;set_of_numbers&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;set_of_numbers&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">999</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;set_of_numbers&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;set_of_numbers&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">555</span>
+
+<span class="k">print</span> <span class="p">(</span><span class="n">df</span><span class="p">)</span></code></pre></div>
+<pre><code>    set_of_numbers
+0                1
+1                2
+2                3
+3                4
+4                5
+5                6
+6                7
+7                8
+8                9
+9               10
+10               0
+11               0
+    set_of_numbers
+0                1
+1                2
+2                3
+3                4
+4              555
+5                6
+6                7
+7                8
+8                9
+9               10
+10             999
+11             999
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 19. Change NAN values to 0.0</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;set_of_numbers&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">]}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;set_of_numbers&#39;</span><span class="p">])</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;set_of_numbers&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">(),</span> <span class="s1">&#39;set_of_numbers&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">df</span><span class="p">)</span></code></pre></div>
+<pre><code>    set_of_numbers
+0              1.0
+1              2.0
+2              3.0
+3              4.0
+4              5.0
+5              6.0
+6              7.0
+7              8.0
+8              9.0
+9             10.0
+10             NaN
+11             NaN
+    set_of_numbers
+0              1.0
+1              2.0
+2              3.0
+3              4.0
+4              5.0
+5              6.0
+6              7.0
+7              8.0
+8              9.0
+9             10.0
+10             0.0
+11             0.0
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 20. Copy function</span>
+
+<span class="n">df2</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">df2</span></code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>set_of_numbers</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6.0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8.0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>9.0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 21. String methods</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;Aaba&#39;</span><span class="p">,</span> <span class="s1">&#39;Baca&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="s1">&#39;CABA&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">])</span>
+<span class="n">s</span><span class="o">.</span><span class="nb">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span></code></pre></div>
+<pre><code>0       a
+1       b
+2       c
+3    aaba
+4    baca
+5     NaN
+6    caba
+7     dog
+8     cat
+dtype: object
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 22. Merge</span>
+
+<span class="n">left</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">],</span> <span class="s1">&#39;lval&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]})</span>
+<span class="n">right</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">],</span> <span class="s1">&#39;rval&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]})</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;left</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span><span class="n">left</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;---------------------------------------&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;right</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span><span class="n">right</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;---------------------------------------&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;key&#39;</span><span class="p">))</span></code></pre></div>
+<pre><code>left
+    key  lval
+0  foo     1
+1  bar     2
+---------------------------------------
+right
+    key  rval
+0  foo     4
+1  bar     5
+---------------------------------------
+   key  lval  rval
+0  foo     1     4
+1  bar     2     5
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 23. Drop duplicate</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">]})</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="s1">&#39;A&#39;</span><span class="p">)</span> </code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>7</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 24. Append</span>
+
+<span class="n">sr1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="s1">&#39;Chicago&#39;</span><span class="p">,</span> <span class="s1">&#39;Toronto&#39;</span><span class="p">,</span> <span class="s1">&#39;Lisbon&#39;</span><span class="p">,</span> <span class="s1">&#39;Rio&#39;</span><span class="p">])</span> 
+  
+<span class="c1"># Create the first Index </span>
+<span class="n">index_1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;City 1&#39;</span><span class="p">,</span> <span class="s1">&#39;City 2&#39;</span><span class="p">,</span> <span class="s1">&#39;City 3&#39;</span><span class="p">,</span> <span class="s1">&#39;City 4&#39;</span><span class="p">,</span> <span class="s1">&#39;City 5&#39;</span><span class="p">]</span>  
+  
+<span class="n">sr1</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">index_1</span> 
+  
+<span class="c1"># Creating the second Series </span>
+<span class="n">sr2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">&#39;Chicage&#39;</span><span class="p">,</span> <span class="s1">&#39;Shanghai&#39;</span><span class="p">,</span> <span class="s1">&#39;Beijing&#39;</span><span class="p">,</span> <span class="s1">&#39;Jakarta&#39;</span><span class="p">,</span> <span class="s1">&#39;Seoul&#39;</span><span class="p">])</span> 
+  
+<span class="c1"># Create the second Index </span>
+<span class="n">index_2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;City 6&#39;</span><span class="p">,</span> <span class="s1">&#39;City 7&#39;</span><span class="p">,</span> <span class="s1">&#39;City 8&#39;</span><span class="p">,</span> <span class="s1">&#39;City 9&#39;</span><span class="p">,</span> <span class="s1">&#39;City 10&#39;</span><span class="p">]</span>  
+
+<span class="n">sr2</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">index_2</span> 
+
+<span class="k">print</span><span class="p">(</span><span class="n">sr1</span><span class="p">)</span>  
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;---------------------------------------&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sr2</span><span class="p">)</span> 
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;---------------------------------------&#39;</span><span class="p">)</span>
+
+
+<span class="c1"># append sr2 at the end of sr1 </span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">sr1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sr2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> </code></pre></div>
+<pre><code>City 1    New York
+City 2     Chicago
+City 3     Toronto
+City 4      Lisbon
+City 5         Rio
+dtype: object
+---------------------------------------
+City 6      Chicage
+City 7     Shanghai
+City 8      Beijing
+City 9      Jakarta
+City 10       Seoul
+dtype: object
+---------------------------------------
+City 1     New York
+City 2      Chicago
+City 3      Toronto
+City 4       Lisbon
+City 5          Rio
+City 6      Chicage
+City 7     Shanghai
+City 8      Beijing
+City 9      Jakarta
+City 10       Seoul
+dtype: object
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 25. Empty series NAN count</span>
+
+ 
+<span class="c1"># min_count = 0 is the default </span>
+<span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([])</span><span class="o">.</span><span class="nb">sum</span><span class="p">()</span> 
+  
+<span class="c1"># When passed  min_count = 1, </span>
+<span class="c1"># sum of an empty series will be NaN </span>
+<span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([])</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">min_count</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> </code></pre></div>
+<pre><code>&lt;ipython-input-30-e09d8f7c215b&gt;:5: DeprecationWarning: The default dtype for empty Series will be 'object' instead of 'float64' in a future version. Specify a dtype explicitly to silence this warning.
+  pd.Series([]).sum()
+&lt;ipython-input-30-e09d8f7c215b&gt;:9: DeprecationWarning: The default dtype for empty Series will be 'object' instead of 'float64' in a future version. Specify a dtype explicitly to silence this warning.
+  pd.Series([]).sum(min_count = 1)
+
+
+
+
+
+nan
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 26. Rank function</span>
+ 
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Animal&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;penguin&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span>
+
+<span class="s1">&#39;spider&#39;</span><span class="p">,</span> <span class="s1">&#39;snake&#39;</span><span class="p">],</span>
+
+<span class="s1">&#39;Number_legs&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">]})</span> 
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;default_rank&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Number_legs&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">rank</span><span class="p">()</span>
+
+<span class="n">df</span></code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Animal</th>
+      <th>Number_legs</th>
+      <th>default_rank</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>cat</td>
+      <td>4.0</td>
+      <td>2.5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>penguin</td>
+      <td>2.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>dog</td>
+      <td>4.0</td>
+      <td>2.5</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>spider</td>
+      <td>8.0</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>snake</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 27. Setting a column a with the sum value</span>
+ 
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;Peter&#39;</span><span class="p">,</span> <span class="s1">&#39;Karl&#39;</span><span class="p">],</span> 
+        <span class="s1">&#39;age&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">19</span><span class="p">]}</span> 
+  
+<span class="n">val</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> 
+  
+<span class="c1"># sum of all salary </span>
+<span class="n">val</span><span class="p">[</span><span class="s1">&#39;total&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="nb">sum</span><span class="p">()</span>
+<span class="n">val</span></code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>age</th>
+      <th>total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>John</td>
+      <td>23</td>
+      <td>84</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Peter</td>
+      <td>42</td>
+      <td>84</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Karl</td>
+      <td>19</td>
+      <td>84</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 28. Date and Time function</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;year&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2015</span><span class="p">,</span> <span class="mi">2016</span><span class="p">],</span>
+
+<span class="s1">&#39;month&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+
+<span class="s1">&#39;day&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]})</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> </code></pre></div>
+<pre><code>0   2015-02-04
+1   2016-03-05
+dtype: datetime64[ns]
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 29. Slicing</span>
+
+<span class="n">df</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span></code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>year</th>
+      <th>month</th>
+      <th>day</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2015</td>
+      <td>2</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2016</td>
+      <td>3</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 30. Concat function</span>
+
+<span class="n">s1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">])</span>
+
+<span class="n">s2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">])</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">])</span> </code></pre></div>
+<pre><code>0    a
+1    b
+0    c
+1    d
+dtype: object
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
+</div>
+  <aside>
+      
+      </aside>
+
+    </div>
+</article>
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    
+
+    <footer class="footer text-center">
+        <div class="container">
+            <span class="text-muted">This project contains 17 pages and is available on <a href="https://github.com/vaishnavi171">GitHub</a>. Copyright &copy; TEAM TACT, <time datetime="2019">2019</time>.</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

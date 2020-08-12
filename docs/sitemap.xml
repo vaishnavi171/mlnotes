@@ -8,7 +8,72 @@
   </url>
   
   <url>
+    <loc>https://vaishnavi171.github.io/mlnotes/python/pandas/pandas/</loc>
+    <lastmod>2020-08-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/confusion_matrix/</loc>
+    <lastmod>2020-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/custom_function/</loc>
+    <lastmod>2020-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/label_encoder/</loc>
+    <lastmod>2020-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/lambda_function/</loc>
+    <lastmod>2020-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/list_append/</loc>
+    <lastmod>2020-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/post_stemmer/</loc>
+    <lastmod>2020-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/remove_punctuation/</loc>
+    <lastmod>2020-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/remove_stopwords/</loc>
+    <lastmod>2020-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/rename_column/</loc>
+    <lastmod>2020-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://vaishnavi171.github.io/mlnotes/python/scikit/scikit_learn/</loc>
+    <lastmod>2020-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/tokenisation/</loc>
+    <lastmod>2020-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/unique_function/</loc>
+    <lastmod>2020-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/f1_score/</loc>
     <lastmod>2020-08-09T00:00:00+00:00</lastmod>
   </url>
   
@@ -23,57 +88,9 @@
   </url>
   
   <url>
-    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/confusion_matrix/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/custom_function/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/label_encoder/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/lambda_function/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/list_append/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/post_stemmer/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/remove_punctuation/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/remove_stopwords/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/rename_column/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/tokenisation/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/unique_function/</loc>
-  </url>
-  
-  <url>
     <loc>https://vaishnavi171.github.io/mlnotes/</loc>
     <lastmod>2020-08-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://vaishnavi171.github.io/mlnotes/python/basics/f1_score/</loc>
   </url>
   
 </urlset>
