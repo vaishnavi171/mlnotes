@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>Numpy Exercises</title>
+      <link>https://vaishnavi171.github.io/mlnotes/python/numpy/numpyexercices/</link>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://vaishnavi171.github.io/mlnotes/python/numpy/numpyexercices/</guid>
+      <description>import numpy as np # 1. Creating array object  arr = np.array( [[ 1, 2, 3], [ 4, 2, 5]] ) # Printing type of arr object  print(&amp;#34;Array is of type: &amp;#34;, type(arr)) # Printing array dimensions (axes) print(&amp;#34;No. of dimensions: &amp;#34;, arr.ndim) # Printing shape of array  print(&amp;#34;Shape of array: &amp;#34;, arr.shape) # Printing size (total number of elements) of array  print(&amp;#34;Size of array: &amp;#34;, arr.</description>
+    </item>
+    
+    <item>
       <title>Simple Python</title>
       <link>https://vaishnavi171.github.io/mlnotes/python/basics/simple-python/</link>
       <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
