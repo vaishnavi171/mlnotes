@@ -30,11 +30,11 @@ print('09','12','2016', sep='-')
 
 
 ```python
-# format date 
-print('09','12','2016', sep='-') 
+# format mail
+print('tact','india', sep='@') 
 ```
 
-    09-12-2016
+    tact@india
 
 
 
